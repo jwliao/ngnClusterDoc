@@ -26,7 +26,7 @@ import org.apache.hadoop.hbase.client.{Put,Get,Delete}
 import org.apache.hadoop.hbase.io.ImmutableBytesWritable
 import org.apache.hadoop.mapred.JobConf
 import org.apache.hadoop.hbase.util.Bytes
- 
+55555555555555555555555555555555555555555555555555555555555555555555555 
 val conf = HBaseConfiguration.create() 
 conf.set(TableInputFormat.INPUT_TABLE, "ttt") 
 conf.set("hbase.zookeeper.property.clientPort", "2181")
