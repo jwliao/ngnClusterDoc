@@ -20,3 +20,14 @@ HBase是分布式NoSQL数据库，采用基于列簇的Key-Value存储模式，�
 Spark是基于MapReduce原理的最新一代分布式计算引擎。主服务配置在ngn72节点，通过7077提供服务，用户可通过WebUI（http://203.91.121.72:8080)查看集群工作情况，在任务运行时可通过WebUI（http://203.91.121.72:4040)查看任务实时运行情况。
 
 集群时间同步NTP服务器配置在ngn66，其他节点时间与ngn66保持同步。
+
+import org.apache.hadoop.hbase.client.ConnectionFactory
+import org.apache.hadoop.hbase.client.{Put,Get,Delete}
+import org.apache.hadoop.hbase.io.ImmutableBytesWritable
+import org.apache.hadoop.mapred.JobConf
+import org.apache.hadoop.hbase.util.Bytes
+ 
+val conf = HBaseConfiguration.create() 
+conf.set(TableInputFormat.INPUT_TABLE, "ttt") 
+conf.set("hbase.zookeeper.property.clientPort", "2181")
+conf.set("hbase.zookeeper.quorum", "ngn91")
